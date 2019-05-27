@@ -11,11 +11,35 @@ Twister is a convenient and simple clone of Twitter
 git clone https://github.com/sekretov/twister.git
 ```
 
-2. Install all the dependencies
+2. Create the `.env` file specigyng the database and web server configuration parameters.
+
+
+```bash
+# inside .env file...
+
+# Database Configuration
+TWISTER_DB_HOST - 
+TWISTER_DB_PORT - 
+TWISTER_DB_NAME - 
+TWISTER_DB_USER - 
+TWISTER_DB_PASSWORD - 
+TWISTER_DB_DIALECT - # one of 'mysql' | 'mariadb' | 'postgres' | 'mssql'
+# Web Server Configuration
+TWISTER_PORT - 
+```
+3. Install all the dependencies
 
 ```bash
 npm install
 ```
+
+4. Start the Server
+
+```bash
+node index.js
+```
+
+
 
 ## Credits
 
