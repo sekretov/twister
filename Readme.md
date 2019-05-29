@@ -18,14 +18,17 @@ git clone https://github.com/sekretov/twister.git
 # inside .env file...
 
 # Database Configuration
-TWISTER_DB_HOST - 
-TWISTER_DB_PORT - 
-TWISTER_DB_NAME - 
-TWISTER_DB_USER - 
-TWISTER_DB_PASSWORD - 
-TWISTER_DB_DIALECT - # one of 'mysql' | 'mariadb' | 'postgres' | 'mssql'
+TWISTER_DB_HOST= 
+TWISTER_DB_PORT=
+TWISTER_DB_NAME=
+TWISTER_DB_USER=
+TWISTER_DB_PASSWORD=
+TWISTER_DB_DIALECT= # one of 'mysql' | 'mariadb' | 'postgres' | 'mssql'
 # Web Server Configuration
-TWISTER_PORT - 
+TWISTER_PORT=
+# WEB APP CONFIGURATIONS
+TWISTER_ADMIN_LOGIN=
+TWISTER_ADMIN_PASSWORD=
 ```
 3. Install all the dependencies
 
