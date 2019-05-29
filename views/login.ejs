@@ -10,14 +10,14 @@
         <header>
             <h1>twister</h1>
         </header>
-        <ul> 
-            <% for (const twit of twits) { %>
-                <li><%= twit.message %></li>
-            <% } %>
-        </ul>
-        <form action="/" method="POST">
-            <textarea name="message"></textarea>
-            <input type="submit" value="Twit">
+        <form action="/login" method="POST">
+            <label>
+                <input type="text" name="login" required>
+            </label></br>
+            <label>    
+                <input type="password" name="password" required></br>
+            </label></br>
+            <input type="submit" value="Sign In" required></br>
         </form>
         <footer>
             <p>&copy; 2019</p>
