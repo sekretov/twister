@@ -1,26 +1,30 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Birder</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>twister</h1>
-        </header>
+<%- include('header'); -%>
+    <header>
+        <h1>twister</h1>
+        <div class="auth-panel">
+            <% if (session.authorized) { %>
+               <%= session.login %>
+               <a href="/logout">Log out</a>
+            <% } else { %>
+                <a href="/register">Registration</a>
+                <a href="/login">Log In</a>
+            <% } %>
+        </div>    
+    </header>
         <ul> 
             <% for (const twit of twits) { %>
                 <li><%= twit.message %></li>
+                
+                    <form action="/twit/<%= twit.id %>/delete" method="POST">
+                        <input type="submit" value="Delete Twit">
+                    </form>
+                
             <% } %>
         </ul>
-        <form action="/" method="POST">
-            <textarea name="message"></textarea>
-            <input type="submit" value="Twit">
-        </form>
-        <footer>
-            <p>&copy; 2019</p>
-        </footer>
-    </body>
-</html>
+        <% if (session.authorized) { %>
+            <form action="/" method="POST">
+                <textarea name="message"></textarea>
+                <input type="submit" value="Twit">
+            </form>
+        <% } %>
+<%- include('footer'); -%>
