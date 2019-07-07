@@ -44,8 +44,6 @@ npm install
 node index.js
 ```
 
-
-
 ## Credits
 
-Sekretov Maksim Vasilievich <makc9207@mail.ru>
+Sekretov Maksim Vasilievich <maximsecret10@gmail.com>

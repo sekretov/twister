@@ -11,18 +11,27 @@
             <% } %>
         </div>    
     </header>
-        <ul> 
+        <ul id="twits"> 
+            <!--
             <% for (const twit of twits) { %>
                 <li><%= twit.message %></li>
-                
+                <% if (session.userAdm) { %>
                     <form action="/twit/<%= twit.id %>/delete" method="POST">
-                        <input type="submit" value="Delete Twit">
+                        <input type="submit" value="delete twit">
+                    </form>    
+                <% } else if (session.userId == twit.userId) { %>
+                    <form action="/twit/<%= twit.id %>/delete" method="POST">
+                        <input type="submit" value="delete twit">
                     </form>
-                
+                    <form action="/twit/<%= twit.id %>/update" method="POST">
+                        <input type="submit" value="update">
+                    </form>
+                <% } %>
             <% } %>
+            -->
         </ul>
         <% if (session.authorized) { %>
-            <form action="/" method="POST">
+            <form id="twitForm" action="/" method="POST">
                 <textarea name="message"></textarea>
                 <input type="submit" value="Twit">
             </form>
